@@ -6,7 +6,7 @@ interface InputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export function InputPassword({ placeholder, value, onChange }: InputProps){
+export function PasswordInput({ placeholder, value, onChange }: InputProps){
   // futuramente posso adicionar um eye button para visualizar a senha
   const [isVisible] = useState(false)
   

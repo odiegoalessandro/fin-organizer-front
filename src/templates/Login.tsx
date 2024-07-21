@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { InputPassword } from "../componets/inputPassword";
-import { TextInput } from "../componets/inputText";
+import { PasswordInput } from "../componets/passwordInput";
+import { TextInput } from "../componets/textInput";
 
 export function Login() {
   const [email, setEmail] = useState<string>("");
@@ -22,7 +22,7 @@ export function Login() {
                     onChange={e => setEmail(e.target.value)}
                     placeholder="Informe seu e-mail"
                   />
-                  <InputPassword
+                  <PasswordInput
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                     placeholder="Informe sua senha"
