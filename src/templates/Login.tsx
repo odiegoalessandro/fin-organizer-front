@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { PasswordInput } from "../componets/passwordInput";
 import { TextInput } from "../componets/textInput";
 
@@ -8,7 +9,7 @@ export function Login() {
 
   return (
     <div className="h-screen bg-red-100 flex items-center justify-center">
-      <main className="w-full xl:max-h-[850px] xl:max-w-[950px] 2xl:max-w-[1450px] mx-auto">
+      <main className="w-full h-full xl:max-h-[850px] xl:max-w-[950px] 2xl:max-w-[1450px] mx-auto">
         <div className="flex h-full">
           <div className="w-full bg-red-500 flex">
             <div className="w-full bg-white text-black max-sm:px-5 px-20 py-16 flex flex-col justify-around max-xl:h-screen">
@@ -27,12 +28,12 @@ export function Login() {
                     onChange={e => setPassword(e.target.value)}
                     placeholder="Informe sua senha"
                   />
+                  <Link to="create-account" className="text-gray-400 hover:text-gray-600 transition-colors text-sm underline">Clique aqui para criar sua conta!</Link>
+                  <button type="submit" className="bg-red-500 text-white font-bold max max-w-80 py-4 rounded-md hover:bg-red-700 transition-all delay-75">Login</button>
                 </form>
               </nav>
             </div>
-            <div className="hidden xl:flex h-auto w-full mt-auto">
-              <img src="/people.png" className="bg-cover p-20" />
-            </div>
+            <div className="hidden xl:flex h-full w-full mt-auto bg-[url('/background.jpg')] bg-cover" />
           </div>
         </div>
       </main>
